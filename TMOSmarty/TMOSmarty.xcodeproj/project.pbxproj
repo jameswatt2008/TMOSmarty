@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F08E19781987E57F0032122D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19771987E57F0032122D /* Foundation.framework */; };
+		F08E197A1987E57F0032122D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19791987E57F0032122D /* CoreGraphics.framework */; };
+		F08E197C1987E57F0032122D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E197B1987E57F0032122D /* UIKit.framework */; };
+		F08E19821987E57F0032122D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F08E19801987E57F0032122D /* InfoPlist.strings */; };
+		F08E19841987E57F0032122D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19831987E57F0032122D /* main.m */; };
+		F08E19881987E57F0032122D /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19871987E57F0032122D /* DemoAppDelegate.m */; };
+		F08E198B1987E57F0032122D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08E19891987E57F0032122D /* Main.storyboard */; };
+		F08E198E1987E57F0032122D /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E198D1987E57F0032122D /* DemoViewController.m */; };
+		F08E19901987E57F0032122D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08E198F1987E57F0032122D /* Images.xcassets */; };
+		F08E19971987E57F0032122D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19961987E57F0032122D /* XCTest.framework */; };
+		F08E19981987E57F0032122D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19771987E57F0032122D /* Foundation.framework */; };
+		F08E19991987E57F0032122D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E197B1987E57F0032122D /* UIKit.framework */; };
+		F08E19A11987E57F0032122D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F08E199F1987E57F0032122D /* InfoPlist.strings */; };
+		F08E19A31987E57F0032122D /* TMOSmartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19A21987E57F0032122D /* TMOSmartyTests.m */; };
+		F08E19B61987E68F0032122D /* TMOObjectVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19B01987E68F0032122D /* TMOObjectVerifier.m */; };
+		F08E19B71987E68F0032122D /* UIImageView+TMOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19B21987E68F0032122D /* UIImageView+TMOImageView.m */; };
+		F08E19B81987E68F0032122D /* UIView+TMOView.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19B41987E68F0032122D /* UIView+TMOView.m */; };
+		F08E19BB1987F0320032122D /* TMOSmarty.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19BA1987F0320032122D /* TMOSmarty.m */; };
+		F08E19BE1987F08F0032122D /* Smarty.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19BD1987F08F0032122D /* Smarty.m */; };
+		F08E19C11987F20B0032122D /* SmartyFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19C01987F20B0032122D /* SmartyFunctions.m */; };
+		F08E19C41987F32B0032122D /* SmartyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19C31987F32B0032122D /* SmartyBinder.m */; };
+		F08E19C71987F3820032122D /* UIView+TMOSmarty.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19C61987F3820032122D /* UIView+TMOSmarty.m */; };
+		F08E19CB1987F4CC0032122D /* NSString+TMOString.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E19CA1987F4CC0032122D /* NSString+TMOString.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F08E199A1987E57F0032122D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F08E196C1987E57F0032122D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F08E19731987E57F0032122D;
+			remoteInfo = TMOSmarty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F08E19741987E57F0032122D /* TMOSmarty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMOSmarty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08E19771987E57F0032122D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F08E19791987E57F0032122D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F08E197B1987E57F0032122D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F08E197F1987E57F0032122D /* TMOSmarty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMOSmarty-Info.plist"; sourceTree = "<group>"; };
+		F08E19811987E57F0032122D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F08E19831987E57F0032122D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F08E19851987E57F0032122D /* TMOSmarty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMOSmarty-Prefix.pch"; sourceTree = "<group>"; };
+		F08E19861987E57F0032122D /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
+		F08E19871987E57F0032122D /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
+		F08E198A1987E57F0032122D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F08E198C1987E57F0032122D /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		F08E198D1987E57F0032122D /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		F08E198F1987E57F0032122D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F08E19951987E57F0032122D /* TMOSmartyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMOSmartyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08E19961987E57F0032122D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F08E199E1987E57F0032122D /* TMOSmartyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMOSmartyTests-Info.plist"; sourceTree = "<group>"; };
+		F08E19A01987E57F0032122D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F08E19A21987E57F0032122D /* TMOSmartyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMOSmartyTests.m; sourceTree = "<group>"; };
+		F08E19AF1987E68F0032122D /* TMOObjectVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMOObjectVerifier.h; sourceTree = "<group>"; };
+		F08E19B01987E68F0032122D /* TMOObjectVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMOObjectVerifier.m; sourceTree = "<group>"; };
+		F08E19B11987E68F0032122D /* UIImageView+TMOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TMOImageView.h"; sourceTree = "<group>"; };
+		F08E19B21987E68F0032122D /* UIImageView+TMOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TMOImageView.m"; sourceTree = "<group>"; };
+		F08E19B31987E68F0032122D /* UIView+TMOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TMOView.h"; sourceTree = "<group>"; };
+		F08E19B41987E68F0032122D /* UIView+TMOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TMOView.m"; sourceTree = "<group>"; };
+		F08E19B91987F0320032122D /* TMOSmarty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMOSmarty.h; sourceTree = "<group>"; };
+		F08E19BA1987F0320032122D /* TMOSmarty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMOSmarty.m; sourceTree = "<group>"; };
+		F08E19BC1987F08F0032122D /* Smarty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smarty.h; sourceTree = "<group>"; };
+		F08E19BD1987F08F0032122D /* Smarty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smarty.m; sourceTree = "<group>"; };
+		F08E19BF1987F20B0032122D /* SmartyFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartyFunctions.h; sourceTree = "<group>"; };
+		F08E19C01987F20B0032122D /* SmartyFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartyFunctions.m; sourceTree = "<group>"; };
+		F08E19C21987F32B0032122D /* SmartyBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartyBinder.h; sourceTree = "<group>"; };
+		F08E19C31987F32B0032122D /* SmartyBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartyBinder.m; sourceTree = "<group>"; };
+		F08E19C51987F3820032122D /* UIView+TMOSmarty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TMOSmarty.h"; sourceTree = "<group>"; };
+		F08E19C61987F3820032122D /* UIView+TMOSmarty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TMOSmarty.m"; sourceTree = "<group>"; };
+		F08E19C81987F4040032122D /* TMOToolKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMOToolKitMacro.h; sourceTree = "<group>"; };
+		F08E19C91987F4CC0032122D /* NSString+TMOString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TMOString.h"; sourceTree = "<group>"; };
+		F08E19CA1987F4CC0032122D /* NSString+TMOString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TMOString.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F08E19711987E57F0032122D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E197A1987E57F0032122D /* CoreGraphics.framework in Frameworks */,
+				F08E197C1987E57F0032122D /* UIKit.framework in Frameworks */,
+				F08E19781987E57F0032122D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08E19921987E57F0032122D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E19971987E57F0032122D /* XCTest.framework in Frameworks */,
+				F08E19991987E57F0032122D /* UIKit.framework in Frameworks */,
+				F08E19981987E57F0032122D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F08E196B1987E57F0032122D = {
+			isa = PBXGroup;
+			children = (
+				F08E19AE1987E68F0032122D /* Depends */,
+				F08E19B51987E68F0032122D /* Src */,
+				F08E197D1987E57F0032122D /* TMOSmarty */,
+				F08E199C1987E57F0032122D /* TMOSmartyTests */,
+				F08E19761987E57F0032122D /* Frameworks */,
+				F08E19751987E57F0032122D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F08E19751987E57F0032122D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19741987E57F0032122D /* TMOSmarty.app */,
+				F08E19951987E57F0032122D /* TMOSmartyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F08E19761987E57F0032122D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19771987E57F0032122D /* Foundation.framework */,
+				F08E19791987E57F0032122D /* CoreGraphics.framework */,
+				F08E197B1987E57F0032122D /* UIKit.framework */,
+				F08E19961987E57F0032122D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F08E197D1987E57F0032122D /* TMOSmarty */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19861987E57F0032122D /* DemoAppDelegate.h */,
+				F08E19871987E57F0032122D /* DemoAppDelegate.m */,
+				F08E19891987E57F0032122D /* Main.storyboard */,
+				F08E198C1987E57F0032122D /* DemoViewController.h */,
+				F08E198D1987E57F0032122D /* DemoViewController.m */,
+				F08E198F1987E57F0032122D /* Images.xcassets */,
+				F08E197E1987E57F0032122D /* Supporting Files */,
+			);
+			path = TMOSmarty;
+			sourceTree = "<group>";
+		};
+		F08E197E1987E57F0032122D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F08E197F1987E57F0032122D /* TMOSmarty-Info.plist */,
+				F08E19801987E57F0032122D /* InfoPlist.strings */,
+				F08E19831987E57F0032122D /* main.m */,
+				F08E19851987E57F0032122D /* TMOSmarty-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F08E199C1987E57F0032122D /* TMOSmartyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19A21987E57F0032122D /* TMOSmartyTests.m */,
+				F08E199D1987E57F0032122D /* Supporting Files */,
+			);
+			path = TMOSmartyTests;
+			sourceTree = "<group>";
+		};
+		F08E199D1987E57F0032122D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F08E199E1987E57F0032122D /* TMOSmartyTests-Info.plist */,
+				F08E199F1987E57F0032122D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F08E19AE1987E68F0032122D /* Depends */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19C91987F4CC0032122D /* NSString+TMOString.h */,
+				F08E19CA1987F4CC0032122D /* NSString+TMOString.m */,
+				F08E19C81987F4040032122D /* TMOToolKitMacro.h */,
+				F08E19AF1987E68F0032122D /* TMOObjectVerifier.h */,
+				F08E19B01987E68F0032122D /* TMOObjectVerifier.m */,
+				F08E19B11987E68F0032122D /* UIImageView+TMOImageView.h */,
+				F08E19B21987E68F0032122D /* UIImageView+TMOImageView.m */,
+				F08E19B31987E68F0032122D /* UIView+TMOView.h */,
+				F08E19B41987E68F0032122D /* UIView+TMOView.m */,
+			);
+			name = Depends;
+			path = ../Depends;
+			sourceTree = "<group>";
+		};
+		F08E19B51987E68F0032122D /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				F08E19B91987F0320032122D /* TMOSmarty.h */,
+				F08E19BA1987F0320032122D /* TMOSmarty.m */,
+				F08E19BC1987F08F0032122D /* Smarty.h */,
+				F08E19BD1987F08F0032122D /* Smarty.m */,
+				F08E19BF1987F20B0032122D /* SmartyFunctions.h */,
+				F08E19C01987F20B0032122D /* SmartyFunctions.m */,
+				F08E19C21987F32B0032122D /* SmartyBinder.h */,
+				F08E19C31987F32B0032122D /* SmartyBinder.m */,
+				F08E19C51987F3820032122D /* UIView+TMOSmarty.h */,
+				F08E19C61987F3820032122D /* UIView+TMOSmarty.m */,
+			);
+			name = Src;
+			path = ../Src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F08E19731987E57F0032122D /* TMOSmarty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08E19A61987E57F0032122D /* Build configuration list for PBXNativeTarget "TMOSmarty" */;
+			buildPhases = (
+				F08E19701987E57F0032122D /* Sources */,
+				F08E19711987E57F0032122D /* Frameworks */,
+				F08E19721987E57F0032122D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMOSmarty;
+			productName = TMOSmarty;
+			productReference = F08E19741987E57F0032122D /* TMOSmarty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F08E19941987E57F0032122D /* TMOSmartyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08E19A91987E57F0032122D /* Build configuration list for PBXNativeTarget "TMOSmartyTests" */;
+			buildPhases = (
+				F08E19911987E57F0032122D /* Sources */,
+				F08E19921987E57F0032122D /* Frameworks */,
+				F08E19931987E57F0032122D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F08E199B1987E57F0032122D /* PBXTargetDependency */,
+			);
+			name = TMOSmartyTests;
+			productName = TMOSmartyTests;
+			productReference = F08E19951987E57F0032122D /* TMOSmartyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F08E196C1987E57F0032122D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Demo;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "崔 明辉";
+				TargetAttributes = {
+					F08E19941987E57F0032122D = {
+						TestTargetID = F08E19731987E57F0032122D;
+					};
+				};
+			};
+			buildConfigurationList = F08E196F1987E57F0032122D /* Build configuration list for PBXProject "TMOSmarty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F08E196B1987E57F0032122D;
+			productRefGroup = F08E19751987E57F0032122D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F08E19731987E57F0032122D /* TMOSmarty */,
+				F08E19941987E57F0032122D /* TMOSmartyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F08E19721987E57F0032122D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E19901987E57F0032122D /* Images.xcassets in Resources */,
+				F08E19821987E57F0032122D /* InfoPlist.strings in Resources */,
+				F08E198B1987E57F0032122D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08E19931987E57F0032122D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E19A11987E57F0032122D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F08E19701987E57F0032122D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E19BB1987F0320032122D /* TMOSmarty.m in Sources */,
+				F08E19CB1987F4CC0032122D /* NSString+TMOString.m in Sources */,
+				F08E19B71987E68F0032122D /* UIImageView+TMOImageView.m in Sources */,
+				F08E19C71987F3820032122D /* UIView+TMOSmarty.m in Sources */,
+				F08E198E1987E57F0032122D /* DemoViewController.m in Sources */,
+				F08E19BE1987F08F0032122D /* Smarty.m in Sources */,
+				F08E19B61987E68F0032122D /* TMOObjectVerifier.m in Sources */,
+				F08E19C41987F32B0032122D /* SmartyBinder.m in Sources */,
+				F08E19C11987F20B0032122D /* SmartyFunctions.m in Sources */,
+				F08E19841987E57F0032122D /* main.m in Sources */,
+				F08E19B81987E68F0032122D /* UIView+TMOView.m in Sources */,
+				F08E19881987E57F0032122D /* DemoAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08E19911987E57F0032122D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08E19A31987E57F0032122D /* TMOSmartyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F08E199B1987E57F0032122D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F08E19731987E57F0032122D /* TMOSmarty */;
+			targetProxy = F08E199A1987E57F0032122D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F08E19801987E57F0032122D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F08E19811987E57F0032122D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F08E19891987E57F0032122D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F08E198A1987E57F0032122D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F08E199F1987E57F0032122D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F08E19A01987E57F0032122D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F08E19A41987E57F0032122D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F08E19A51987E57F0032122D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F08E19A71987E57F0032122D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMOSmarty/TMOSmarty-Prefix.pch";
+				INFOPLIST_FILE = "TMOSmarty/TMOSmarty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F08E19A81987E57F0032122D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMOSmarty/TMOSmarty-Prefix.pch";
+				INFOPLIST_FILE = "TMOSmarty/TMOSmarty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F08E19AA1987E57F0032122D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TMOSmarty.app/TMOSmarty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMOSmarty/TMOSmarty-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TMOSmartyTests/TMOSmartyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F08E19AB1987E57F0032122D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TMOSmarty.app/TMOSmarty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMOSmarty/TMOSmarty-Prefix.pch";
+				INFOPLIST_FILE = "TMOSmartyTests/TMOSmartyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F08E196F1987E57F0032122D /* Build configuration list for PBXProject "TMOSmarty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08E19A41987E57F0032122D /* Debug */,
+				F08E19A51987E57F0032122D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F08E19A61987E57F0032122D /* Build configuration list for PBXNativeTarget "TMOSmarty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08E19A71987E57F0032122D /* Debug */,
+				F08E19A81987E57F0032122D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F08E19A91987E57F0032122D /* Build configuration list for PBXNativeTarget "TMOSmartyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08E19AA1987E57F0032122D /* Debug */,
+				F08E19AB1987E57F0032122D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F08E196C1987E57F0032122D /* Project object */;
+}
