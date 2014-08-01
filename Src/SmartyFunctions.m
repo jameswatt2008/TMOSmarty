@@ -12,7 +12,7 @@
 
 @implementation SmartyFunctions
 
-+ (void)instance {
++ (void)initialize {
     [self replace];
     [self length];
     [self dateFormat];

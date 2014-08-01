@@ -12,8 +12,19 @@ typedef NSString *(^SmartyCallbackBlock)(NSString *theString, NSArray *theParams
 
 @interface Smarty : NSObject
 
+/**
+ *  add a custom smarty function
+ *
+ *  @param argBlock block
+ *  @param tagName  function tag name
+ */
 + (void)addFunction:(SmartyCallbackBlock)argBlock withTagName:(NSString *)tagName;
 
+/**
+ *  remove a custom or system function
+ *
+ *  @param tagName function tag name
+ */
 + (void)removeFunctionWithTagName:(NSString *)tagName;
 
 @end
@@ -23,7 +34,7 @@ typedef NSString *(^SmartyCallbackBlock)(NSString *theString, NSArray *theParams
  */
 @interface Smarty (PrivateUse)
 
-+ (void)instance;
++ (void)initialize;
 
 + (NSString *)stringByReplaceingSmartyCode:(NSString *)argString
                                 withObject:(NSDictionary *)argObject;

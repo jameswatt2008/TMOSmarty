@@ -10,9 +10,9 @@
 
 @implementation TMOSmarty
 
-+ (void)instance {
-    [Smarty instance];
-    [SmartyFunctions instance];
++ (void)initialize {
+    [Smarty initialize];
+    [SmartyFunctions initialize];
 }
 
 @end

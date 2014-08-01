@@ -17,7 +17,7 @@ static NSRegularExpression *smartyRegularExpression;
 
 @implementation Smarty
 
-+ (void)instance {
++ (void)initialize {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         smartyDictionary = [NSMutableDictionary dictionary];
@@ -72,7 +72,7 @@ static NSRegularExpression *smartyRegularExpression;
 }
 
 /**
- *  替换所有Smarty关键词至最终值
+ *  replace all smarty keywords.
  */
 + (NSString *)stringByReplaceingSmartyCode:(NSString *)argString
                                 withObject:(NSDictionary *)argObject {
@@ -113,54 +113,27 @@ static NSRegularExpression *smartyRegularExpression;
                     id lastValue = argDataSource;
                     id targetObject = argDataSource;
                     NSString *targetKey;
-                    NSArray *theResult = [argParam contains:@"."] ? [argParam componentsSeparatedByString:@"."] : [argParam componentsSeparatedByString:@"["];
+                    NSArray *theResult = [argParam componentsSeparatedByString:@"."];
                     NSUInteger index = 0;
                     for (NSString *resultItem in theResult) {
-                        NSString *theKey = [resultItem stringByReplacingOccurrencesOfString:@"]" withString:@""];
-                        if ([theKey contains:@"'"] || [theKey contains:@"\""] || index == 0 || ![lastValue isKindOfClass:[NSArray class]]) {
-                            theKey = [theKey stringByReplacingOccurrencesOfString:@"'" withString:@""];
-                            theKey = [theKey stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-                            targetKey = theKey;
-                            SEL sel = sel_registerName([theKey cStringUsingEncoding:NSUTF8StringEncoding]);
-                            if ([lastValue respondsToSelector:sel]) {
-                                //可认为是对象取值
+                        NSString *theKey = TOString(resultItem);
+                        targetKey = theKey;
+                        if ([lastValue isKindOfClass:[NSArray class]]) {
+                            //get value from array
+                            NSInteger theIndex = TOInteger(theKey);
+                            if (ISValidArray(lastValue, theIndex)) {
                                 targetObject = lastValue;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                                lastValue = [lastValue performSelector:sel withObject:nil];
-#pragma clang diagnostic pop
-                                if (lastValue == nil) {
-                                    targetObject = nil;
-                                    break;
-                                }
-                            }
-                            else {
-                                //可认为是字典取值
-                                if ([lastValue isKindOfClass:[NSDictionary class]]) {
-                                    targetObject = lastValue;
-                                    lastValue = [lastValue valueForKey:TOString(theKey)];
-                                }
-                                else {
-                                    targetObject = nil;
-                                    break;
-                                }
+                                lastValue = [lastValue objectAtIndex:theIndex];
                             }
                         }
                         else {
-                            //可认为是数组取值
-                            if (ISValidArray(lastValue, TOInteger(theKey))) {
-                                targetObject = lastValue;
-                                lastValue = [lastValue objectAtIndex:TOInteger(theKey)];
-                            }
-                            else{
-                                targetObject = nil;
-                                break;
-                            }
+                            //get value from dictionary or object
+                            targetObject = lastValue;
+                            lastValue = [lastValue valueForKeyPath:theKey];
                         }
                         index++;
                     }
-                    if (targetObject != nil) {
+                    if (targetObject != nil && ![targetObject isKindOfClass:[NSArray class]]) {
                         [argView setAdditionValue:[[SmartyBinder alloc] initWithBindObject:targetObject
                                                                             withDataSource:argDataSource
                                                                                   withView:argView
@@ -175,7 +148,7 @@ static NSRegularExpression *smartyRegularExpression;
 }
 
 /**
- *  替换AttributedString关键词至最终值
+ *  replace AttributedString
  *
  *  @param argString     NSAttributedString
  *  @param argObject NSDictionary
@@ -201,55 +174,32 @@ static NSRegularExpression *smartyRegularExpression;
 }
 
 /**
- *  取得最终值
+ *  get final value
  */
 + (NSString *)stringByParam:(NSString *)argParam withObject:(id)argObject {
     
     NSArray *functionUseArray;
     if ([argParam contains:@"|"]) {
-        //注册函数调用
+        //custom or system function use
         functionUseArray = [argParam componentsSeparatedByString:@"|"];
         argParam = [functionUseArray firstObject];
     }
     
     id lastValue = argObject;
-    NSArray *theResult = [argParam contains:@"."] ? [argParam componentsSeparatedByString:@"."] : [argParam componentsSeparatedByString:@"["];
+    NSArray *theResult = [argParam componentsSeparatedByString:@"."];
     NSUInteger index = 0;
     for (NSString *resultItem in theResult) {
-        NSString *theKey = [resultItem stringByReplacingOccurrencesOfString:@"]" withString:@""];
-        if ([theKey contains:@"'"] || [theKey contains:@"\""] || index == 0 || ![lastValue isKindOfClass:[NSArray class]]) {
-            theKey = [theKey stringByReplacingOccurrencesOfString:@"'" withString:@""];
-            theKey = [theKey stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-            SEL sel = sel_registerName([theKey cStringUsingEncoding:NSUTF8StringEncoding]);
-            if ([lastValue respondsToSelector:sel]) {
-                //可认为是对象取值
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                lastValue = [lastValue performSelector:sel withObject:nil];
-#pragma clang diagnostic pop
-                if (lastValue == nil) {
-                    return @"";
-                }
-            }
-            else {
-                //可认为是字典取值
-                if ([lastValue isKindOfClass:[NSDictionary class]]) {
-                    lastValue = [lastValue valueForKey:TOString(theKey)];
-                }
-                else {
-                    return @"";
-                }
+        NSString *theKey = TOString(resultItem);
+        if ([lastValue isKindOfClass:[NSArray class]]) {
+            //get value from array
+            NSInteger theIndex = TOInteger(theKey);
+            if (ISValidArray(lastValue, theIndex)) {
+                lastValue = [lastValue objectAtIndex:theIndex];
             }
         }
         else {
-            //可认为是数组取值
-            if (ISValidArray(lastValue, TOInteger(theKey))) {
-                lastValue = [lastValue objectAtIndex:TOInteger(theKey)];
-            }
-            else{
-                return @"";
-            }
+            //get value from dictionary or object
+            lastValue = [lastValue valueForKeyPath:theKey];
         }
         index++;
     }
@@ -268,7 +218,7 @@ static NSRegularExpression *smartyRegularExpression;
 }
 
 /**
- *  检测是否包含Smarty关键词
+ *  check string if has smarty keywords
  */
 + (BOOL)isSmarty:(NSString *)argString {
     if ([argString contains:[self leftDelimiter]] && [argString contains:[self rightDelimiter]]) {

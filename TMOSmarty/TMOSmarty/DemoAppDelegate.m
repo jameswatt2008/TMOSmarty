@@ -7,11 +7,15 @@
 //
 
 #import "DemoAppDelegate.h"
+#import "TMOSmarty.h"
 
 @implementation DemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [TMOSmarty initialize];
+    
     // Override point for customization after application launch.
     return YES;
 }

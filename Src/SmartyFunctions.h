@@ -14,6 +14,6 @@
 
 @interface SmartyFunctions (PrivateUse)
 
-+ (void)instance;
++ (void)initialize;
 
 @end

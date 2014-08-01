@@ -16,6 +16,6 @@
 /**
  *  Call this function after application runs.
  */
-+ (void)instance;
++ (void)initialize;
 
 @end
