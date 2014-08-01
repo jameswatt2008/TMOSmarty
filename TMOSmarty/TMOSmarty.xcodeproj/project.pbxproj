@@ -10,6 +10,7 @@
 		9254EF90198B286900C34755 /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF8F198B286900C34755 /* DemoObject.m */; };
 		9254EF96198B435600C34755 /* DemoBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF95198B435600C34755 /* DemoBindViewController.m */; };
 		9254EF99198B767600C34755 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF98198B767600C34755 /* DemoTableViewController.m */; };
+		9254EF9C198B7AAD00C34755 /* DemoStaticCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF9B198B7AAD00C34755 /* DemoStaticCellTableViewController.m */; };
 		F08E19781987E57F0032122D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19771987E57F0032122D /* Foundation.framework */; };
 		F08E197A1987E57F0032122D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19791987E57F0032122D /* CoreGraphics.framework */; };
 		F08E197C1987E57F0032122D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E197B1987E57F0032122D /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		9254EF95198B435600C34755 /* DemoBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBindViewController.m; sourceTree = "<group>"; };
 		9254EF97198B767600C34755 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
 		9254EF98198B767600C34755 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		9254EF9A198B7AAD00C34755 /* DemoStaticCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoStaticCellTableViewController.h; sourceTree = "<group>"; };
+		9254EF9B198B7AAD00C34755 /* DemoStaticCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoStaticCellTableViewController.m; sourceTree = "<group>"; };
 		F08E19741987E57F0032122D /* TMOSmarty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMOSmarty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E19771987E57F0032122D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F08E19791987E57F0032122D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,8 @@
 				F08E198D1987E57F0032122D /* DemoViewController.m */,
 				9254EF97198B767600C34755 /* DemoTableViewController.h */,
 				9254EF98198B767600C34755 /* DemoTableViewController.m */,
+				9254EF9A198B7AAD00C34755 /* DemoStaticCellTableViewController.h */,
+				9254EF9B198B7AAD00C34755 /* DemoStaticCellTableViewController.m */,
 				9254EF8E198B286900C34755 /* DemoObject.h */,
 				9254EF8F198B286900C34755 /* DemoObject.m */,
 				F08E198F1987E57F0032122D /* Images.xcassets */,
@@ -332,6 +337,7 @@
 			files = (
 				F08E19BB1987F0320032122D /* TMOSmarty.m in Sources */,
 				F08E19CB1987F4CC0032122D /* NSString+TMOString.m in Sources */,
+				9254EF9C198B7AAD00C34755 /* DemoStaticCellTableViewController.m in Sources */,
 				F08E19B71987E68F0032122D /* UIImageView+TMOImageView.m in Sources */,
 				F08E19C71987F3820032122D /* UIView+TMOSmarty.m in Sources */,
 				F08E198E1987E57F0032122D /* DemoViewController.m in Sources */,
