@@ -457,11 +457,64 @@
                             <outlet property="delegate" destination="E08-nj-FFR" id="reR-Om-8UP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Static Cells" id="WAW-gn-ITs"/>
+                    <navigationItem key="navigationItem" title="Static Cells" id="WAW-gn-ITs">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="kFa-IF-z5u">
+                            <connections>
+                                <segue destination="0rs-2q-ZI5" kind="push" id="INW-Ud-lcf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8T-WM-HhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1747" y="106"/>
+        </scene>
+        <!--Demo Function View Controller - Function Usage-->
+        <scene sceneID="oNX-IU-nFr">
+            <objects>
+                <viewController id="0rs-2q-ZI5" customClass="DemoFunctionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CjH-2q-yV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="tcV-o7-AMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S12-zZ-mUD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;&lt;{myName}>&quot; length is:&lt;{myName|length}>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S43-9M-fuE">
+                                <rect key="frame" x="20" y="88" width="327" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;{myName}> hash:&lt;{myName|tryHash}>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0d-KL-cqc">
+                                <rect key="frame" x="20" y="118" width="300" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;{myName}> may replace as &lt;{myName|replace:Cui:Ma}>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-6M-Q70">
+                                <rect key="frame" x="20" y="150" width="300" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8It-r4-e1z">
+                                <rect key="frame" x="20" y="322" width="280" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This demo shows how to use smarty function. Smarty function can deal with a series similar function. You may hope to add your custom function, and it's ok!  ---  这个例子示例了如何使用smarty扩展函数。Smarty扩展函数可以处理一系列类似的扩展方法。同时，你可以自行扩展更多使用方法。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Function Usage" id="TRs-LX-17B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCz-6I-8Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="106"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
