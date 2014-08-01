@@ -3,54 +3,44 @@ TMOSmarty
 
 TMOSmarty is a template engine for iOS Apps.
 
-Smarty is a PHP template engine. TMOSmarty all thoughts are inherited from the Smarty, we migrate Smarty to Objective-C, so there TMOSmarty.
+Smarty PHP was originally written using a template engine, is one of the industry's most famous PHP template engine. It separates the logic code and external content, provides an easy to manage and use the method used to originally mixed with PHP code and HTML code for logical separation. Simply speaking, the purpose is to make PHP programmer with separate front-end staff, enables programmers to change the logical content of the program will not affect the front page design staff, the front-end staff re-edit the page without affecting the program logic program, which in the multiplayer cooperative project was particularly important. 
 
-You might think this is all very complicated, but in fact, we have to do is to simplify. We did in the past need to be complicated XIB file documents associated with .m things, the use of Smarty encapsulated rendering.
+Smarty in PHP is widely used, making our Smarty ported to iOS with great interest, so we wrote this one open source library TMOSmarty. 
 
----
+TMOSmarty could have done 
 
-Usage
+* 1 Embedded references 
 
-`pod TMOSmarty`
+Embedded references, Model any type of object can be converted to NSString, and automatically rendered to various UI elements. 
 
----
+* 2 custom function processing 
 
-## Let's have a simply try!
+Since the use of defined functions can be a complex system can be used for string manipulation methods to encapsulate and use very simple method call. 
 
-Here we create an xib, and we have an object, we are wondering fill text into xib's UILabels.
+* 3.Model / View linkage (using KVO) 
 
-* Let's see what we want.
+In the past, we need to create a bunch of IBOutlet in Interface Builder and .m file references, will cease to exist, at the same time, with the Model / View linkage technology, Model changes will be immediate feedback to View, and you only need one line of code to complete all operations. 
 
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/old_1.png)
+=== 
 
-## In the **past**, we did it like this.
+Use TMOSmarty, you can liberate your hands, reduced by at least 30% of meaningless code. Meanwhile, View (StoryBoard, Interface Builder) and Controller, Model separation will be more thorough.
 
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/old_2.png)
+===
 
-We will create many labels in xib.
+If you want to know more, please see wiki.
 
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/old_3.png)
+### 简体中文
 
-We have to create IBOutlet in .m file.
+* [何谓模板引擎](何谓模板引擎)
+* [基础用法](基础用法)
+* [模板语法](模板语法)
+* [Model绑定](Model绑定)
+* [函数使用](函数使用)
 
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/old_4.png)
+### English
 
-We should use NSString method to fill text into labels.
-
-## But Now! With TMOSmarty, it's **not necessary**!
-
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/new_1.png)
-
-We create labels as normal, and pay attention please, we use "name:<{myName}>", which means, theObject.myName will fill into label automatically.
-
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/new_3.png)
-
-We create an object, set some data in it.(Dictionary,array,NSObject is OK!)
-
-![](https://raw.githubusercontent.com/flymwy/myself/master/TMOSmarty/new_2.png)
-
-We just type one line code. It's done! No IBOutlet, No NSString parse.
-
----
-
-Is it really magically? I say, it's really the simplest usage. TMOSmarty provide much more functions than this. Download the source code, you will find a whole demo.
+* [Template Engine](Template-Engine)
+* [Usage](Usage)
+* [Parse](Parse)
+* [Model Binding](Model-Binding)
+* [Use Function](Use-Function)
