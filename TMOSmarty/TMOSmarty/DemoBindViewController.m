@@ -15,10 +15,15 @@
 
 @property (nonatomic, strong) DemoObject *myObject;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *wifeLabel;
 
 @end
 
 @implementation DemoBindViewController
+
+- (void)dealloc {
+    [self.view smartyUnBind];//add this line avoid KVO crash.
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -44,7 +49,10 @@
     [self useBlockToDoMore];//block usage
     [self.view smartyRendWithObject:self.myObject isRecursive:YES];
     
-    [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(changeModelItems) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(changeModelItems) userInfo:nil repeats:NO];
+    
+    [NSTimer scheduledTimerWithTimeInterval:8.0 target:self selector:@selector(childBorn) userInfo:nil repeats:NO];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -67,6 +75,17 @@
             [bindView setBackgroundColor:[UIColor clearColor]];
         }
     }];
+    
+    
+    [self.wifeLabel smartyBindWithBlock:^(UIView *bindView, id dataSource, id bindObject, NSString *key, id newValue) {
+        if ([key isEqualToString:@"myChild"]) {
+            [bindView setBackgroundColor:[UIColor grayColor]];
+        }
+    }];
+}
+
+- (void)childBorn {
+    self.myObject.myChild = @"Little Pony";
 }
 
 - (void)didReceiveMemoryWarning

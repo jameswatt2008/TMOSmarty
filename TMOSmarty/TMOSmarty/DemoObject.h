@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSString *myName;
 @property (nonatomic, assign) NSInteger myAge;
 @property (nonatomic, assign) CGFloat myWeight;
+@property (nonatomic, strong) NSString *myChild;
 @property (nonatomic, strong) DemoObjectSecond *couple;
 
 @property (nonatomic, strong) NSArray *demoArray;

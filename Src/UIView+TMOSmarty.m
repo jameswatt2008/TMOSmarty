@@ -125,6 +125,14 @@
             [Smarty addSmartyBindBySmartyCode:[(UIImageView *)self accessibilityIdentifier] withView:self withDataSource:argDataSource];
         }
     }
+    
+    //hint bind
+    if (self.accessibilityHint != nil && self.accessibilityHint.length > 0) {
+        if ([Smarty isSmarty:self.accessibilityHint]) {
+            [Smarty addSmartyBindBySmartyCode:self.accessibilityHint withView:self withDataSource:argDataSource];
+        }
+    }
+    
 }
 
 @end

@@ -134,10 +134,17 @@ static NSRegularExpression *smartyRegularExpression;
                         index++;
                     }
                     if (targetObject != nil && ![targetObject isKindOfClass:[NSArray class]]) {
-                        [argView setAdditionValue:[[SmartyBinder alloc] initWithBindObject:targetObject
-                                                                            withDataSource:argDataSource
-                                                                                  withView:argView
-                                                                                   withKey:targetKey]
+                        NSMutableDictionary *binders = [argView valueForAdditionKey:@"smartyBinder"];
+                        if (binders == nil) {
+                            binders = [NSMutableDictionary dictionary];
+                        }
+                        
+                        [binders setObject:[[SmartyBinder alloc] initWithBindObject:targetObject
+                                                                     withDataSource:argDataSource
+                                                                           withView:argView
+                                                                            withKey:targetKey]
+                                    forKey:targetKey];
+                        [argView setAdditionValue:binders
                                            forKey:@"smartyBinder"];
                     }
                 }
