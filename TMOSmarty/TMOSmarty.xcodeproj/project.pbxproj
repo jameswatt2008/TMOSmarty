@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9254EF90198B286900C34755 /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF8F198B286900C34755 /* DemoObject.m */; };
 		9254EF96198B435600C34755 /* DemoBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF95198B435600C34755 /* DemoBindViewController.m */; };
+		9254EF99198B767600C34755 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254EF98198B767600C34755 /* DemoTableViewController.m */; };
 		F08E19781987E57F0032122D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19771987E57F0032122D /* Foundation.framework */; };
 		F08E197A1987E57F0032122D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E19791987E57F0032122D /* CoreGraphics.framework */; };
 		F08E197C1987E57F0032122D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E197B1987E57F0032122D /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		9254EF8F198B286900C34755 /* DemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoObject.m; sourceTree = "<group>"; };
 		9254EF94198B435600C34755 /* DemoBindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBindViewController.h; sourceTree = "<group>"; };
 		9254EF95198B435600C34755 /* DemoBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBindViewController.m; sourceTree = "<group>"; };
+		9254EF97198B767600C34755 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		9254EF98198B767600C34755 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 		F08E19741987E57F0032122D /* TMOSmarty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMOSmarty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E19771987E57F0032122D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F08E19791987E57F0032122D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +158,8 @@
 				9254EF95198B435600C34755 /* DemoBindViewController.m */,
 				F08E198C1987E57F0032122D /* DemoViewController.h */,
 				F08E198D1987E57F0032122D /* DemoViewController.m */,
+				9254EF97198B767600C34755 /* DemoTableViewController.h */,
+				9254EF98198B767600C34755 /* DemoTableViewController.m */,
 				9254EF8E198B286900C34755 /* DemoObject.h */,
 				9254EF8F198B286900C34755 /* DemoObject.m */,
 				F08E198F1987E57F0032122D /* Images.xcassets */,
@@ -337,6 +342,7 @@
 				F08E19C41987F32B0032122D /* SmartyBinder.m in Sources */,
 				F08E19C11987F20B0032122D /* SmartyFunctions.m in Sources */,
 				F08E19841987E57F0032122D /* main.m in Sources */,
+				9254EF99198B767600C34755 /* DemoTableViewController.m in Sources */,
 				F08E19B81987E68F0032122D /* UIView+TMOView.m in Sources */,
 				F08E19881987E57F0032122D /* DemoAppDelegate.m in Sources */,
 			);

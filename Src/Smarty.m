@@ -21,7 +21,7 @@ static NSRegularExpression *smartyRegularExpression;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         smartyDictionary = [NSMutableDictionary dictionary];
-        smartyRegularExpression = [[NSRegularExpression alloc] initWithPattern:@"<\\{\\$([^\\}]+)\\}>"
+        smartyRegularExpression = [[NSRegularExpression alloc] initWithPattern:@"<\\{([^\\}]+)\\}>"
                                                                        options:NSRegularExpressionAllowCommentsAndWhitespace
                                                                          error:nil];
     });
@@ -129,7 +129,18 @@ static NSRegularExpression *smartyRegularExpression;
                         else {
                             //get value from dictionary or object
                             targetObject = lastValue;
-                            lastValue = [lastValue valueForKeyPath:theKey];
+                            if ([lastValue isKindOfClass:[NSDictionary class]]) {
+                                lastValue = [lastValue valueForKeyPath:theKey];
+                            }
+                            else{
+                                SEL sel = sel_registerName([theKey cStringUsingEncoding:NSUTF8StringEncoding]);
+                                if ([lastValue respondsToSelector:sel]) {
+                                    lastValue = [lastValue valueForKeyPath:theKey];
+                                }
+                                else {
+                                    lastValue = nil;
+                                }
+                            }
                         }
                         index++;
                     }
@@ -206,7 +217,18 @@ static NSRegularExpression *smartyRegularExpression;
         }
         else {
             //get value from dictionary or object
-            lastValue = [lastValue valueForKeyPath:theKey];
+            if ([lastValue isKindOfClass:[NSDictionary class]]) {
+                lastValue = [lastValue valueForKeyPath:theKey];
+            }
+            else{
+                SEL sel = sel_registerName([theKey cStringUsingEncoding:NSUTF8StringEncoding]);
+                if ([lastValue respondsToSelector:sel]) {
+                    lastValue = [lastValue valueForKeyPath:theKey];
+                }
+                else {
+                    lastValue = nil;
+                }
+            }
         }
         index++;
     }
