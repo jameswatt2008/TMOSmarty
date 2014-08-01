@@ -15,13 +15,6 @@
 
 @implementation UIView (TMOSmarty)
 
-/**
- *  执行Smarty替换
- */
-- (void)smartyRendWithDictionary:(NSDictionary *)argDictionary isRecursive:(BOOL)argIsRecursive {
-    [self smartyRendWithObject:argDictionary isRecursive:argIsRecursive];
-}
-
 - (void)smartyRendWithObject:(id)argObject isRecursive:(BOOL)argIsRecursive {
     //self
     [self smartyReplaceWithObject:argObject];

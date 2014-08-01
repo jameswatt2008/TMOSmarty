@@ -28,7 +28,7 @@
         self.myObject.couple = [[DemoObjectSecond alloc] init];
         self.myObject.couple.myWife = @"Single";
         self.myObject.demoArray = @[@"1",@"2",@"3"];
-        self.myObject.demoDictionary = @{@"hello": @"world"};
+        self.myObject.demoDictionary = [@{@"hello": @"world"} mutableCopy];
     }
     return self;
 }

@@ -22,6 +22,6 @@
 @property (nonatomic, strong) DemoObjectSecond *couple;
 
 @property (nonatomic, strong) NSArray *demoArray;
-@property (nonatomic, strong) NSDictionary *demoDictionary;
+@property (nonatomic, strong) NSMutableDictionary *demoDictionary;
 
 @end

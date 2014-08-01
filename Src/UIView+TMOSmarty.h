@@ -21,13 +21,13 @@
 
 /**
  *  Declare that this view is a KVO bind View.
- *  When object's item changed, the specific view will rend again automitically.
+ *  When object's item changed, the specific view will rend again automatically.
  */
 - (void)smartyBind;
 
 /**
  *  Declare that this view and all subview for this view will are KVO bind Views.
- *  When object's item changed, the specific view will rend again automitically.
+ *  When object's item changed, the specific view will rend again automatically.
  */
 - (void)smartyBindForSubviews;
 
