@@ -31,16 +31,16 @@ If you want to know more, please see wiki.
 
 ### 简体中文
 
-* [何谓模板引擎](何谓模板引擎)
-* [基础用法](基础用法)
-* [模板语法](模板语法)
-* [Model绑定](Model绑定)
-* [函数使用](函数使用)
+* [何谓模板引擎](https://github.com/duowan/TMOSmarty/wiki/何谓模板引擎)
+* [基础用法](https://github.com/duowan/TMOSmarty/wiki/基础用法)
+* [模板语法](https://github.com/duowan/TMOSmarty/wiki/模板语法)
+* [Model绑定](https://github.com/duowan/TMOSmarty/wiki/Model绑定)
+* [函数使用](https://github.com/duowan/TMOSmarty/wiki/函数使用)
 
 ### English
 
-* [Template Engine](Template-Engine)
-* [Usage](Usage)
-* [Parse](Parse)
-* [Model Binding](Model-Binding)
-* [Use Function](Use-Function)
+* [Template Engine](https://github.com/duowan/TMOSmarty/wiki/Template-Engine)
+* [Usage](https://github.com/duowan/TMOSmarty/wiki/Usage)
+* [Parse](https://github.com/duowan/TMOSmarty/wiki/Parse)
+* [Model Binding](https://github.com/duowan/TMOSmarty/wiki/Model-Binding)
+* [Use Function](https://github.com/duowan/TMOSmarty/wiki/Use-Function)
