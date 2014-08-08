@@ -122,10 +122,10 @@
             return @"刚刚";
         }
         else if (date.timeIntervalSince1970 - TOInteger(theString) < 3600){
-            return [NSString stringWithFormat:@"%d分钟前", (int)(TOInteger(theString) - date.timeIntervalSince1970)/60];
+            return [NSString stringWithFormat:@"%d分钟前", (int)(date.timeIntervalSince1970 - TOInteger(theString))/60];
         }
         else if (date.timeIntervalSince1970 - TOInteger(theString) < 43200) {
-            return [NSString stringWithFormat:@"%d小时前", (int)(TOInteger(theString) - date.timeIntervalSince1970)/3600];
+            return [NSString stringWithFormat:@"%d小时前", (int)(date.timeIntervalSince1970 - TOInteger(theString))/3600];
         }
         else{
             SmartyCallbackBlock dateFormatBlock = [Smarty smartyDictionary][@"dateFormat"];
